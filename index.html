@@ -1,101 +1,353 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>David Ramirez Resume</title>
-        <style>
-            .footer{
-                text-align: center;
-                padding:10px;
-                background-color: #ddd;
-            }
-            .table{
-                width: 100%;
-                border: 1px solid black;
-            }
-            dt{
-                font-weight: bold;
-            }
-            section{
-                padding: 10px;
-                border: 1px solid black;
-                margin:  10px;
-            }
-        </style>
-    </head>
-    <body>
-        <header class="header">
-           <h1>David Ramirez</h1> 
-        </header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#Exp">Experience</a></li>
-                <li><a href="#Edu">Education</a></li>
-                <li><a href="#Int">Interests</a></li>
-                <li><a href="#Ski">Skills</a></li>
-                <li><a href="#Con">Contact</a></li>
-            </ul>
-        </nav>
-        <article> <p>Welcome to my website</p>
-            <hr>
-            <p>My name is David</p>
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQF_LGZYQaRTjA/profile-displayphoto-shrink_400_400/B4DZYGkDX1HAAg-/0/1743866837379?e=1772064000&v=beta&t=xvdg6SF-zI3YKhfwcQL-NSCrb88_yzE0rAUzi-5lagM">
-        </article>
-        <section id="Exp">
-            <h2>Experience</h2>
-          <table>
-            <colgroup>
-                <col span="1" style="background-color: #ddd;">
-            </colgroup>
-            <tr>
-                <th>Company</th>
-                <th>Details</th>
-                <th>Years</th>
-            </tr>
-            <tr>
-                <td>Khaos</td>
-                <td>Software Programmer</td>
-                <td>2024-2026</td>
-            </tr>
-            <tr>
-                <td>Renvica</td>
-                <td>Software Programmer</td>
-                <td>2020-2022</td>
-            </tr>
-          </table>
-        </section>
-        <section id="Edu">
-            <h2>Eduaction</h2>
-          <dl>
-            <dt>My University</dt>
-            <dd>Computer Science</dd>
-            <dt>Grade</dt>
-            <dd>Maths</dd>
-          </dl>
-        </section>
-        <section id="Int">
-            <h2>Interests</h2>
-            <ul>
-                <li>Computers</li>
-                <li>Music</li>
-            </ul>
-          
-        </section>
-        <section id="Ski">
-            <h2>Skills</h2>
-            <ol>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>JavaScript</li>
-            </ol>
-          
-        </section>
-        <section id="Con">
-            <h2>Contact Me</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Ramírez Palacios · Software Engineer</title>
+  <meta name="description" content="David Ramírez Palacios — Software Engineer from Málaga, Spain. Machine learning, time series forecasting, backend architecture and DevOps." />
+  <meta name="author" content="David Ramírez Palacios" />
+  <meta property="og:title" content="David Ramírez Palacios · Software Engineer" />
+  <meta property="og:description" content="Machine learning, time series forecasting, backend architecture and DevOps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://github.com/davidraamirez.png" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Home"><span class="brand-mark">DR</span><span class="brand-text">david.ramirez</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow mono">Hi, I'm</p>
+          <h1>David Ramírez<br /><span class="gradient-text">Palacios</span></h1>
+          <p class="hero-role">Software Engineer · Machine Learning · Backend</p>
+          <p class="hero-lead">
+            I build data-driven pipelines, forecasting models and the APIs and containers that put them into production.
+            Double Degree in Mathematics &amp; Computer Science, MSc in Software Engineering &amp; AI.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <ul class="socials" aria-label="Social links">
+            <li><a href="https://github.com/davidraamirez" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/david-ram%C3%ADrez-palacios-352376120/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a></li>
+            <li><a href="mailto:ramirezpalaciosd@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </a></li>
+          </ul>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="avatar-wrap">
+            <img class="avatar" src="https://github.com/davidraamirez.png?size=460" alt="Portrait of David Ramírez Palacios" width="230" height="230" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar avatar-fallback',textContent:'DR'}))" />
+          </div>
+          <div class="code-card mono" aria-hidden="true">
+            <div class="code-dots"><i></i><i></i><i></i></div>
+<pre><span class="k">from</span> david <span class="k">import</span> Engineer
+
+me = Engineer(
+  location=<span class="s">"Málaga, ES"</span>,
+  focus=[<span class="s">"ML"</span>, <span class="s">"Time Series"</span>,
+         <span class="s">"Backend"</span>, <span class="s">"DevOps"</span>],
+  stack=[<span class="s">"Python"</span>, <span class="s">"FastAPI"</span>,
+         <span class="s">"Docker"</span>, <span class="s">"MongoDB"</span>],
+)
+me.<span class="f">build</span>()  <span class="c"># 🚀</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono">01.</span> About me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
             <p>
-                Contact me at my email 
-                <a href="mailto:ramirezpalaciosd@gmail.com">ramirezpalaciosd@gmail.com</a>
+              I'm a Software Engineer who combines <strong>advanced algorithmic problem-solving</strong> with hands-on
+              experience in <strong>machine learning</strong> and <strong>backend software architecture</strong>.
             </p>
-        </section>
-        <footer class="footer">Copyright</footer>
-    </body>
+            <p>
+              I hold a Double Degree in Mathematics &amp; Computer Science from the University of Málaga, a Master's in
+              Software Engineering &amp; Artificial Intelligence, and specialised training in
+              <strong>Malware Intelligence and Reverse Engineering</strong> from Google and UMA.
+            </p>
+            <p>
+              Day to day I build data-driven analytical pipelines, deploy FastAPI services and manage Dockerized workflows
+              for complex, real-time applications at the <strong>Khaos Research Group</strong>.
+            </p>
+          </div>
+          <ul class="stats reveal">
+            <li><span class="stat-num">2+</span><span class="stat-label">years in R&amp;D software</span></li>
+            <li><span class="stat-num">2</span><span class="stat-label">degrees: Maths &amp; CS</span></li>
+            <li><span class="stat-num">MSc</span><span class="stat-label">Software Eng. &amp; AI</span></li>
+            <li><span class="stat-num">🇪🇸 🇮🇹</span><span class="stat-label">Málaga &amp; Rome (Erasmus+)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono">02.</span> Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-meta mono">Sep 2024 — Present</div>
+            <div class="card">
+              <h3>Software Developer</h3>
+              <p class="org">University of Málaga · Khaos Research Group · Málaga, Spain</p>
+              <ul class="bullets">
+                <li>Time series analysis and modelling in Python on large dataframes, using SARIMAX, Prophet, neural networks, gradient boosting, random forests and stacked ensembles for forecasting and temporal pattern recognition.</li>
+                <li>Advanced statistical methods for <strong>drift detection</strong> in time series, making predictive models more robust in dynamic data environments.</li>
+                <li>Development and deployment of applications with <strong>Docker</strong> containers for portable, scalable production workflows.</li>
+                <li>Interactive user-facing apps with Gradio, Streamlit and Node.js for data exploration and model output visualisation.</li>
+                <li>Design and implementation of RESTful APIs with <strong>FastAPI</strong>, exposing data processing and predictive capabilities as high-performance services.</li>
+                <li>MongoDB for structured and semi-structured data within analytical pipelines; project management with OpenProject.</li>
+              </ul>
+              <ul class="tags">
+                <li>Python</li><li>pandas</li><li>scikit-learn</li><li>Prophet</li><li>FastAPI</li><li>Docker</li><li>MongoDB</li><li>Streamlit</li><li>Gradio</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-meta mono">Sep 2017 — Jun 2024</div>
+            <div class="card">
+              <h3>Private Tutor</h3>
+              <p class="org">Self-employed · Málaga, Spain</p>
+              <ul class="bullets">
+                <li>Mathematics and English tutoring for high school students.</li>
+                <li>Lessons adapted to each student's learning needs, explaining complex concepts in a clear, structured way.</li>
+                <li>Planning and organisation of tutoring sessions.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono">03.</span> Selected projects</h2>
+        <div class="projects-grid">
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/shipyard" target="_blank" rel="noopener" aria-label="Shipyard on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>Shipyard</h3>
+            <p>Full-stack deployment platform that automates application builds, containerization and Kubernetes deployments.</p>
+            <ul class="tags"><li>TypeScript</li><li>Docker</li><li>Kubernetes</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/drift-detection_data-augmentation" target="_blank" rel="noopener" aria-label="Drift detection on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>Drift Detection &amp; Data Augmentation</h3>
+            <p>Environment for analysing and monitoring drift in time series, with synthetic data generation, augmentation techniques and predictive model evaluation.</p>
+            <ul class="tags"><li>Python</li><li>Forecasting</li><li>Time series</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/MAS-Logistics-AutoGen" target="_blank" rel="noopener" aria-label="MAS Logistics on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>MAS Logistics · AutoGen</h3>
+            <p>Multi-agent system for logistics: Contract Net coordination protocols, route planning with obstacles and cost optimisation via reinforcement learning.</p>
+            <ul class="tags"><li>AutoGen</li><li>Multi-agent</li><li>RL</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/moea-hyperparameter-optimization" target="_blank" rel="noopener" aria-label="MOEA optimization on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>MOEA Hyperparameter Optimization</h3>
+            <p>Hyperparameter optimisation, sensitivity analysis and performance evaluation of NSGA-II on the ZCAT benchmark suite.</p>
+            <ul class="tags"><li>Python</li><li>Optuna</li><li>NSGA-II</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/GradientWithoutBackpropagation" target="_blank" rel="noopener" aria-label="Gradient without backpropagation on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>Gradient Without Backpropagation</h3>
+            <p>Comparison of neural network training with classic backpropagation versus the forward gradient method.</p>
+            <ul class="tags"><li>Deep learning</li><li>Jupyter</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <svg class="folder" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              <a href="https://github.com/davidraamirez/salon_appointment_scheduler" target="_blank" rel="noopener" aria-label="Salon scheduler on GitHub" class="project-link">↗</a>
+            </div>
+            <h3>Salon Appointment Scheduler</h3>
+            <p>Interactive appointment scheduling system with customer management and appointment tracking.</p>
+            <ul class="tags"><li>PostgreSQL</li><li>Bash</li></ul>
+          </article>
+        </div>
+        <p class="more reveal"><a class="btn btn-ghost" href="https://github.com/davidraamirez?tab=repositories" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono">04.</span> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group card reveal">
+            <h3>Languages</h3>
+            <ul class="tags"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>C++</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Data &amp; Machine Learning</h3>
+            <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>Deep learning</li><li>Time series</li><li>Predictive modelling</li><li>matplotlib</li><li>seaborn</li><li>Big data</li><li>Selenium</li><li>BeautifulSoup</li></ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Backend</h3>
+            <ul class="tags"><li>FastAPI</li><li>Node.js</li><li>Express</li><li>NestJS</li><li>REST / SOAP</li><li>JWT auth</li><li>API security</li><li>BullMQ</li><li>Prisma</li></ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>DevOps &amp; Cloud</h3>
+            <ul class="tags"><li>Docker</li><li>Git / GitHub</li><li>GitLab</li><li>CI/CD</li><li>Jenkins</li><li>AWS</li><li>Oracle Cloud</li><li>Prometheus</li><li>Grafana</li></ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Databases</h3>
+            <ul class="tags"><li>PostgreSQL / PostGIS</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Neo4j</li></ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Web</h3>
+            <ul class="tags"><li>React</li><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>Streamlit</li><li>Gradio</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono">05.</span> Education</h2>
+        <div class="edu-grid">
+          <article class="card edu reveal">
+            <p class="edu-date mono">2025 — 2026</p>
+            <h3>Master in Software Engineering &amp; Artificial Intelligence</h3>
+            <p class="org">University of Málaga · EQF level 7</p>
+            <p>Software engineering, AI, machine learning, data analysis and big data.</p>
+          </article>
+          <article class="card edu reveal">
+            <p class="edu-date mono">2019 — 2025</p>
+            <h3>Double Degree in Mathematics &amp; Computer Science</h3>
+            <p class="org">University of Málaga · EQF level 6</p>
+            <p>Mathematics, algorithms, programming, data analysis, software development and artificial intelligence.</p>
+          </article>
+          <article class="card edu reveal">
+            <p class="edu-date mono">Oct — Dec 2024</p>
+            <h3>University Expert Diploma in Reverse Engineering &amp; Malware Intelligence</h3>
+            <p class="org">University of Málaga &amp; Google</p>
+            <p>Reverse engineering, malware intelligence, cybersecurity and malware analysis.</p>
+          </article>
+          <article class="card edu reveal">
+            <p class="edu-date mono">2022 — 2023</p>
+            <h3>Erasmus+ Exchange · Computer Science &amp; Mathematics</h3>
+            <p class="org">Sapienza University of Rome · Italy</p>
+            <p>International academic experience and intercultural competences.</p>
+          </article>
+        </div>
+
+        <div class="sub-grid">
+          <div class="reveal">
+            <h3 class="sub-title">Certifications</h3>
+            <ul class="cert-list">
+              <li><span class="cert-name">Artificial Intelligence</span><span class="cert-meta">EIT Higher Education Initiative · 3 ECTS · 2026</span></li>
+              <li><span class="cert-name">Big Data</span><span class="cert-meta">EIT Higher Education Initiative · 3 ECTS · 2026</span></li>
+              <li><span class="cert-name">Internet of Things</span><span class="cert-meta">EIT Higher Education Initiative · 3 ECTS · 2026</span></li>
+              <li><span class="cert-name">Cybersecurity</span><span class="cert-meta">EIT Higher Education Initiative · 2 ECTS · 2025</span></li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3 class="sub-title">Languages</h3>
+            <ul class="lang-list">
+              <li>
+                <div class="lang-row"><span>Spanish</span><span class="mono">Native</span></div>
+                <div class="bar"><span style="--w:100%"></span></div>
+              </li>
+              <li>
+                <div class="lang-row"><span>English</span><span class="mono">B2</span></div>
+                <div class="bar"><span style="--w:70%"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner reveal">
+        <h2 class="section-title center"><span class="mono">06.</span> Let's talk</h2>
+        <p>Open to opportunities in software engineering, machine learning and backend development. My inbox is always open.</p>
+        <div class="hero-cta center">
+          <a class="btn btn-primary" href="mailto:ramirezpalaciosd@gmail.com">Say hello</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/david-ram%C3%ADrez-palacios-352376120/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <p class="contact-mail mono">ramirezpalaciosd@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> David Ramírez Palacios · Málaga, Spain</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
